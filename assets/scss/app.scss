@@ -1,3 +1,118 @@
+@import "./utils/variables";
+
+html {
+	font-size: 62.5%;
+}
+
 body {
-	background-color: lightgrey;
+	margin: 0;
+	background-color: #fff;
+	@media screen and (min-width: 1024px) {
+		font-size: 2rem;
+	}
+}
+
+main {
+	@media screen and (min-width: 1024px) {
+/*		width: 80%;
+		margin: 0 auto;*/
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		
+	}
+}
+
+footer {
+	margin-top: 1%;
+}
+
+h1, h2 {
+	color: $primary;
+	text-align: center;
+}
+
+ul {
+	margin: 0;
+	list-style: none;
+	padding-left: -40px;
+}
+
+img {
+	max-width: 100%; /* les images prennent au maximum la largeur de l'Ã©lÃ©ment parent */
+	margin: auto;
+}
+
+/* Header & Footer */
+
+#presentationL {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	img {
+		width: 80%;
+	}
+	h1 {
+		font-size: 5rem;
+	}
+}
+
+/* Mise en forme des navigation */
+
+#topnav {
+
+	background-color: $primary;
+
+	& a {
+		display: flex;
+		margin-top: 1rem;
+	}
+
+	@media screen and (min-width: 1024px) {
+		width: 20%;
+		@include bordering;
+		padding-bottom: 1%;
+		& #topmenu #menu {
+			display: none;
+		}
+		img {
+			width: 80%;
+			border-radius: 5px;
+		}
+	}
+}
+
+#bottomnav {
+	background-color: $primary;
+	ul {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	@media screen and (min-width: 1024px) {
+		font-size: 2rem;
+		padding: 1% 0;
+	}
+}
+
+/* Page Index */
+
+#home {
+	@include bordering;
+	padding: 0 2% 1%;
+	margin: 3%;
+	@media (min-width: 1024px) {
+		margin: 0;
+		width: 50%;
+	}
+}
+
+#news {
+	background-color: $primary;
+
+	@media screen and (min-width: 1024px) {
+		@include bordering;
+		width: 20%;
+	}
 }

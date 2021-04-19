@@ -3,5 +3,74 @@
 {% block title %}AC-MB / Assistance Conseil Maud Berthier{% endblock %}
 
 {% block body %}
-<h1>Bienvenue chez ACMB</h1>
+<main>
+<nav id="topnav">
+	<a href="index.php"><img class="logo" src="{{asset('img/logo.jpg')}}" alt="logo de la société AC-MB représentant un éléphant bleu"></a>
+	<ul id="topmenu"><p id="menu"><i class="fa fa-bars" aria-hidden="true"></i> MENU <i class="fa fa-bars" aria-hidden="true"></i></p>
+		<li><a href="#">Accueil</a></li>
+		<li><a href="#">Actualités</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">Liens</a></li>
+	</ul>
+</nav>
+
+<section id="home">
+	<h2>Missions QSE RSE externalisées</h2>
+	<img src="{{asset('img/ACMB.png')}}" alt="nuage de mots autour des notions de qualité sécurité environnement énergie travail d'AC-MB">
+	<p>Spécialisés dans le conseil, l’audit, la formation et l’accompagnement des entreprises sur les questions de qualité, sécurité, environnement, énergie, et développement durable (RSE), nous nous appuyons sur une expérience de plus de 15 ans.</p>
+	<p>Nous nous adressons aux PME et ETI des secteurs du BTP, du transport, de l’industrie, des services et des collectivités.</p>
+	<p class="list">Nos interventions :
+		<ul>
+			<li>Missions de responsable QSE RSE en temps partagé (externalisation de la compétence QSE)</li>
+			<li>Réalisation des audits internes et visites chantier</li>
+			<li>Mise en place de référentiels qualité, sécurité, environnement, énergie, responsabilité sociétale</li>
+			<li>Animations de communication sécurité et environnement, réalisation de formations sur mesure</li>
+			<li>Remplacement, renforcement d’équipe, ressource pour service QSE</li>
+		</ul></p>
+	
+	<p class="list">Nos réalisations :
+		<ul>
+			<li>QSE : 
+				<ul>
+					<li>Démarche qualité sur le référentiel ISO 9001 – approche processus</li>
+					<li>Démarche sécurité OHSAS 18001, ISO 45001, MASE UIC</li>
+					<li>Démarche environnement ISO 14001</li>
+					<li>Démarche qualité géoréférencement et détection</li>
+				</ul>
+			</li>
+
+			<li>RSE :
+				<ul>
+					<li>Démarche d’évaluation ISO 26000 et Ecovadis ® </li>
+					<li>Rédaction de communications sur le progrès COP et rapports RSE</li>
+					<li>Rédaction de fiches pratiques RSE</li>
+					<li>Démarche énergie</li>
+					<li>Démarche santé qualité de vie au travail FNQ ®</li>
+				</ul>
+			</li>
+		</ul>
+	</p>
+		
+	</p>
+
+
+	<p>
+		<a href="#">Contactez-nous</a> pour que nous puissions définir la mise en oeuvre de notre collaboration.
+	</p>
+</section>
+
+<aside id="news">
+	<h2><a href='#'>Dernières Réalisations:</a></h2>
+	<ul>
+		<?php foreach ($query as $value): ?>
+			<li>
+				<a href="#">
+				<img src="" alt="" >
+				<p></p>
+				</a>
+			</li>
+		<?php endforeach; ?>
+	</ul>
+</aside>
+</main>
 {% endblock %}
