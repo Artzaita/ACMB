@@ -7,8 +7,8 @@ html {
 body {
 	margin: 0;
 	background-color: #fff;
-	@media screen and (min-width: 1024px) {
 		font-size: 2rem;
+	@media screen and (min-width: 1024px) {
 	}
 }
 
@@ -46,15 +46,24 @@ img {
 /* Header & Footer */
 
 #presentationL {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	text-align: center;
-	img {
-		width: 80%;
+	a:nth-of-type(2) {
+		display: none;
 	}
-	h1 {
-		font-size: 5rem;
+	@media screen and (min-width: 1024px) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		img {
+			width: 80%;
+		}
+		h1 {
+			font-size: 5rem;
+		}
+		a:nth-of-type(2) {
+			display: block;
+		}
 	}
 }
 
@@ -64,9 +73,12 @@ img {
 
 	background-color: $primary;
 
+	& img {
+		display: none;
+	}
+
 	& a {
 		display: flex;
-		margin-top: 1rem;
 	}
 
 	@media screen and (min-width: 1024px) {
@@ -76,7 +88,12 @@ img {
 		& #topmenu #menu {
 			display: none;
 		}
+
+		& a {
+			margin-top: 1rem;
+		}
 		img {
+			display: block;
 			width: 80%;
 			border-radius: 5px;
 		}
@@ -99,19 +116,21 @@ img {
 /* Page Index */
 
 #home {
-	@include bordering;
 	padding: 0 2% 1%;
-	margin: 3%;
 	@media (min-width: 1024px) {
+	@include bordering;
+	margin: 3%;
 		margin: 0;
 		width: 50%;
 	}
 }
 
 #news {
-	background-color: $primary;
+	display: none;
 
 	@media screen and (min-width: 1024px) {
+		display: block;
+		background-color: $primary;
 		@include bordering;
 		width: 20%;
 	}
