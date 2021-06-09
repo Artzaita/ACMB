@@ -1,0 +1,23 @@
+ {% if user is defined %}
+            <main>
+                <nav id="backnav">
+                    <p><a href="{{path('app_back')}}">Accueil</a></p>
+                    <p><a href="#">Gestion des Utilisateurs</a></p>
+                    <p><a href="{{path('app_back_contact')}}">Gestion des Clients</a></p>
+                    <p><a href="#">Gestions des Articles</a></p>
+                    <p><a href="#">Gestions des Habilitations</a></p>
+                    <p><a href="#">Liens</a></p>
+                    <p><a href="#">Déconnexion</a></p>
+                </nav>
+                {% else %}
+            <main id="main">
+                <nav id="topnav">
+                    <a href="{{path('app_home')}}"><img class="logo" src="{{asset('img/logo.jpg')}}" alt="logo de la société AC-MB représentant un éléphant bleu"></a>
+                    <ul id="topmenu"><p id="menu"><i class="fa fa-bars" aria-hidden="true"></i> MENU <i class="fa fa-bars" aria-hidden="true"></i></p>
+                        <li><a href="{{path('app_home')}}">Accueil</a></li>
+                        <li><a href="#">Actualités</a></li>
+                        <li><a href="{{path('app_contact')}}">Contact</a></li>
+                        <li><a href="#">Liens</a></li>
+                    </ul>
+                </nav>
+                 {% endif %}

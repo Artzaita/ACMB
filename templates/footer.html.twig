@@ -1,4 +1,9 @@
 <footer>
+	{% if user is defined %}
+		{{include('upnav.html.twig')}}
+
+	{% else %}
+
 	<nav id="bottomnav">
 		<ul>
 			<li><a href="#">Accueil</a></li>
@@ -9,6 +14,8 @@
 			<li><a href="#">Mentions Légales</a></li>
 		</ul>
 	</nav>
+
+	{% endif %}
 
 	<p>Conception et Réalisation: <a href="https://www.larrun-prod.com">Larrun-Prod</a></p>
 	

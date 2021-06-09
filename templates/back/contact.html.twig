@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<h1>Gestion des contacts</h1>
+<p>Bonjour,</p>
+<p>Ceci est votre page de gestion des contacts.</p>
+
+<table id="main_list">
+	<thead>
+		<tr>
+			<th>Nom</th>
+			<th>Prénom</th>
+			<th>Courriel</th>
+			<th>Téléphone</th>
+			<th>Fonction</th>
+			<th>Société</th>
+			<th>Agrément</th>
+			<th>Date d'Agrément</th>
+			<th>Message</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for contact in contacts %}
+		<tr>
+			<td>{{contact.LastName}}</td>
+			<td>{{contact.FirstName}}</td>
+			<td>{{contact.Email}}</td>
+			<td>{{contact.Phone}}</td>
+			<td>{{contact.Function}}</td>
+			<td>{{contact.Society}}</td>
+			<td>{{contact.Agreement}}</td>
+			<td>{{contact.AgreementDate|date("d/m/Y")}}</td>
+			<td>{{contact.Comment}}</td>
+			<td></td>
+		</tr>
+
+	{% endfor %}
+	</tbody>
+
+</table>
+
+
+	{# <p>{{contact.id}}</p> #}
+
+
+{% endblock %}
