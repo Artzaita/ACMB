@@ -1,18 +1,25 @@
 @import "./utils/variables";
+@import "./utils/fonts";
 
 html {
 	font-size: 62.5%;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	background-color: #fff;
-		font-size: 2rem;
+	font-family: 'Gotham';
+	font-size: 5rem;
 	@media screen and (min-width: 1024px) {
+		font-size: 2rem;
 	}
 }
 
-main {
+#main {
 	@media screen and (min-width: 1024px) {
 /*		width: 80%;
 		margin: 0 auto;*/
@@ -28,14 +35,27 @@ footer {
 }
 
 h1, h2 {
+	margin: 0;
 	color: $primary;
 	text-align: center;
+	font-size: 8rem;
+}
+
+h2 {
+	@media screen and (min-width: 1024px) {
+		font-size: 4rem;
+	}
 }
 
 ul {
 	margin: 0;
 	list-style: none;
 	padding-left: -40px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
 }
 
 img {
@@ -91,6 +111,7 @@ img {
 
 		& a {
 			margin-top: 1rem;
+			font-size: 3rem;
 		}
 		img {
 			display: block;
@@ -100,25 +121,49 @@ img {
 	}
 }
 
+#backnav {
+	background-color: $primary;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+
 #bottomnav {
 	background-color: $primary;
 	ul {
 		display: flex;
 		justify-content: space-around;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	@media screen and (min-width: 1024px) {
 		font-size: 2rem;
 		padding: 1% 0;
+
+		ul {
+			flex-direction: row;
+		}
 	}
 }
 
 /* Page Index */
 
 #home {
-	padding: 0 2% 1%;
-	@media (min-width: 1024px) {
 	@include bordering;
+	padding: 0 2% 1%;
+	margin: 3%;
+
+	ul {
+		list-style: disc;
+
+		ul {
+			list-style: square;
+		}
+	}
+
+	@media (min-width: 1024px) {
 	margin: 3%;
 		margin: 0;
 		width: 50%;
@@ -133,5 +178,42 @@ img {
 		background-color: $primary;
 		@include bordering;
 		width: 20%;
+		h2 {
+			font-size: 3rem;
+		}
+	}
+}
+
+/* Page Contact */
+
+.contact form {
+	@media screen and (min-width: 1024px) {
+		width: 80%;
+		margin: auto;
+	}
+}
+
+.contact fieldset {
+	border-radius: 5px;
+}
+
+.contact form label:after {
+	content: " ";
+	display: block;
+}
+
+.contact form input,
+.contact form textarea {
+	width: 90%;
+	border-radius: 5px;
+}
+
+.contact form button {
+	padding: 2%;
+    border-radius: 5px;
+    background-color: $primary;
+    color: #fff;
+	@media screen and (min-width: 768px) { 
+		margin: 1% auto;
 	}
 }

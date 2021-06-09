@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact - AC-MB / Assistance Conseil Maud Berthier{% endblock %}
+
+{% block main %}
+	<div class="contact">
+		<h2>Formulaire de demande de contact:</h2>
+		{{ form_start(form) }}
+		<fieldset>
+			<legend>Présentez-vous :</legend>
+				{{ form_widget(form)}}
+
+				<button type="submit" value="">Envoyer votre demande</button>
+		</fieldset>
+
+
+		{{ form_end(form) }}
+	</div>
+
+
+
+{% endblock %}
