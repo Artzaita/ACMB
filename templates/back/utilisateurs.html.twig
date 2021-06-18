@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block main %}
+	<h2>Gestion des utilisateurs</h2>
+	{{ form_start(form) }}
+		<fieldset>
+			<legend>Nouvel Utilisateur :</legend>
+				{{ form_widget(form)}}
+
+				<button type="submit" value="">Création</button>
+		</fieldset>
+
+
+	{{ form_end(form) }}
+
+
+{% endblock %}
